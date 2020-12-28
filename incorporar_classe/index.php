@@ -12,11 +12,15 @@ $contato = new Contato(
     '04101-300',
     '11',
     '5571-2751',
-    'comercial'
+    'Comercial'
 );
 
-$usuario = new Usuario('Giovanni', 'Tempobono', $contato, $cep, $telefone);
+$usuario = new Usuario('Giovanni', 'Tempobono', $contato);
 
-echo $usuario->getNome();
+echo "<p>{$usuario->getNome()}</p>";
 
-echo $usuario->getTelefoneDdd();
+echo "<p>{$usuario->getEndereco()}</p>";
+
+echo "<p>{$usuario->getCep()}</p>";
+
+echo "<p>{$usuario->getTelefoneDdd()}</p>";

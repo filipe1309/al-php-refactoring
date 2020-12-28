@@ -50,4 +50,14 @@ class Contato
     {
         return $this->endereco;
     }
+
+    public function getEnderecoECep(): string
+    {
+        return "$this->endereco $this->cep";
+    }
+
+    public function getTelefoneDdd(): string
+    {
+        return "{$this->getTipoTelefone()}: ({$this->getDdd()}) {$this->getTelefone()}";
+    }
 }
